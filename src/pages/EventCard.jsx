@@ -1,51 +1,41 @@
 import React from "react";
-import img from "../assets/EventBackground.png"
+import { useParams } from "react-router-dom";
+import { events } from "../data/eventsData";
+import img from "../assets/EventBackground.png";
 
 const EventCard = () => {
+  const { id } = useParams();
+  const event = events.find(e => e.id === parseInt(id));
+
+  if (!event) return <div className="text-white text-center p-8">Event not found</div>;
+
   return (
     <div 
       className="flex justify-center items-center text-white min-h-screen w-full p-4"
-      style={{
-        backgroundImage: `url(${img})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      style={{ backgroundImage: `url(${img})`, backgroundSize: "cover" }}
     >
-      <div className="mx-auto flex justify-center items-center w-full bg-opacity-70  rounded-lg">
-        <div className="w-full rounded-lg shadow-lg flex flex-wrap items-center">
-          
-          {/* Left Section */}
-          <div className="w-full md:w-1/2 p-4 flex justify-center">
-            <div className="relative bg-gray-300 p-1 rounded-lg shadow-md border border-gray-600 w-full max-w-[400px]">
+      <div className="mx-auto flex justify-center items-center w-full max-w-6xl bg-black bg-opacity-70 rounded-lg p-8">
+        <div className="w-full flex flex-wrap items-center">
+          <div className="w-full md:w-1/2 p-4">
+            <div className="relative bg-gray-300 rounded-lg shadow-md border border-gray-600">
               <img
-                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8fDA%3D"
+                src={event.image}
                 alt="Event"
                 className="rounded-lg w-full h-auto"
+                loading="lazy"
               />
-              <div className="absolute top-2 right-2p-1 rounded-full">
-                <span className="text-white text-xs">🔘</span>
-              </div>
             </div>
           </div>
           
-          {/* Right Section */}
-          <div className="w-full text-center md:w-1/2 p-4">
-            <h2 className="text-6xl max-sm:text-4xl font-bold">Event Name</h2>
-            <p className="mt-4 text-gray-300 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam.
+          <div className="w-full md:w-1/2 p-4 text-center md:text-left">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">{event.title}</h2>
+            <p className="text-gray-300 text-lg mb-8">
+              {event.details}
             </p>
-            <button className="mt-6 bg-gray-600 hover:bg-gray-500 text-white py-2 px-6 rounded-full text-lg transition-colors duration-300">
-              Register
+            <button className="bg-purple-600 hover:bg-purple-700 text-white py-3 px-8 rounded-full text-lg transition-colors duration-300">
+              Register Now
             </button>
           </div>
-          
-          
         </div>
       </div>
     </div>
