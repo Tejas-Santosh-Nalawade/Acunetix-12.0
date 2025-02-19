@@ -13,6 +13,11 @@ import Footer from './components/Footer';
 import Chatbot from "./components/Chatbot";
 import Start from "./components/Start";
 import SchedulePage from "./components/SchedulePage";
+import chatbotIcon from "./assets/AcunetixChatbot.png";
+
+<img src={chatbotIcon} alt="Chatbot Logo" />
+
+import EventCard from "./pages/EventCard";
 
 function App() {
   const [startAnimationComplete, setStartAnimationComplete] = useState(false);
@@ -91,10 +96,19 @@ function App() {
             <section ref={eventRef} data-scroll-section className='min-h-screen mt-6'>
               <Event />
             </section>
+            <section ref={eventRef} data-scroll-section className='min-h-screen mt-6'>
+            <EventCard/>
+          </section>
             <section ref={scheduleRef} data-scroll-section data-scroll-speed="2" className="min-h-screen">
               <SchedulePage/>
+<<<<<<< HEAD
             </section>
             <section ref={sponsorsRef}  data-scroll-section data-scroll-speed="2" className="min-h-screen">
+=======
+            </section>          
+
+            <section ref={sponsorsRef} data-scroll-section data-scroll-speed="2" className="min-h-screen">
+>>>>>>> 541119d848cdd8cdbd7aea191d6d029e4d1a383a
               <Sponsors />
             </section>
             
@@ -118,9 +132,9 @@ function App() {
             onClick={toggleChatbot}
           >
             <img
-              src="https://w7.pngwing.com/pngs/1001/63/png-transparent-internet-bot-computer-icons-chatbot-sticker-electronics-face-careobot.png"
+              src={chatbotIcon}
               alt="Chatbot Logo"
-              className="w-12 h-12 rounded-full shadow-lg hover:scale-110 transition-transform"
+              className="w-15 h-15 rounded-full shadow-lg hover:scale-110 transition-transform"
             />
           </div>
         </>

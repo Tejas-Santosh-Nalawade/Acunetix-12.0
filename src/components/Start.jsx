@@ -50,7 +50,7 @@ export default function LogoAnimation() {
       {/* Heading Container */}
       {showHeading && (
         <div className="absolute flex flex-col pt-5 items-center justify-center text-center animate-fadeIn">
-          <h1 className="text-4xl md:text-8xl font-bold uppercase text-white">
+          <h1 className="text-4xl md:text-8xl font-bold text-white">
             Acunetix 12.0
           </h1>
           <p className="text-lg md:text-2xl text-white">Dive into world of illusions</p>
