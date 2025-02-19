@@ -111,24 +111,13 @@ const SponsorCard = ({ sponsor }) => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-900 to-cyan-900 bg-clip-text text-transparent mb-4">
                   {sponsor.name}
                 </h3>
                 <p className="text-gray-400 text-center mb-6 max-w-xs">
                   {sponsor.description}
                 </p>
-                {/* 
-                <motion.a
-                  href={sponsor.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-xl font-medium relative overflow-hidden transform-gpu"
-                  whileHover={{ scale: 1.05 }}
-                  style={{ display: "inline-block", textAlign: "center", width: "100%" }}
-                >
-                  {/* <span className="relative z-10">Explore Partner</span> */}
-                  {/*<div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                </motion.a> */}
+           
               </motion.div>
             )}
           </AnimatePresence>
@@ -146,7 +135,7 @@ const Sponsors = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full"
+            className="absolute w-1 h-1 bg-gradient-to-r from-purple-950 to-cyan-900 rounded-full"
             initial={{
               x: Math.random() * 100 - 50 + "vw",
               y: Math.random() * 100 - 50 + "vh",
@@ -175,7 +164,7 @@ const Sponsors = () => {
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r text-white bg-clip-text text-transparent mb-6">
             Our Sponsors
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
+          <p className="text-gray-900 max-w-2xl mx-auto text-lg md:text-xl">
             Visionary organizations powering our journey through innovation and collaboration
           </p>
         </motion.div>

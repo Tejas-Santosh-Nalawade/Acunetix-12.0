@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 @import "tailwindcss";
 :root {
     font-family: 'Zen Dots';
@@ -136,4 +138,22 @@ html.has-scroll-smooth {
     will-change: transform;
   }
 
+
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
+}
   
