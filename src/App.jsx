@@ -94,7 +94,7 @@ function App() {
             <section ref={scheduleRef} data-scroll-section data-scroll-speed="2" className="min-h-screen">
               <SchedulePage/>
             </section>
-            <section ref={sponsorsRef} data-scroll-section data-scroll-speed="2" className="min-h-screen">
+            <section ref={sponsorsRef}  data-scroll-section data-scroll-speed="2" className="min-h-screen">
               <Sponsors />
             </section>
             
