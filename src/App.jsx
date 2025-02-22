@@ -41,6 +41,7 @@ function MainContent() {
 
   useEffect(() => {
     if (location.pathname === '/') {
+
       // Initialize Locomotive Scroll for all devices
       locomotiveScroll.current = new LocomotiveScroll({
         el: scrollRef.current,
@@ -48,6 +49,23 @@ function MainContent() {
         getDirection: true,
         smartphone: {
           smooth: true
+
+      // Mobile detection logic
+      const checkMobile = () => {
+        return window.matchMedia('(max-width: 768px)').matches;
+      };
+  
+      const isMobile = checkMobile();
+  
+      // Initialize Locomotive Scroll with conditional multiplier
+      locomotiveScroll.current = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        multiplier: isMobile ? 0.5 : 3.5, // Slower on desktop (0.5), normal on mobile (1)
+        inertia: 2.1,
+        getDirection: true,
+        smartphone: {
+          smooth: 0.1
         },
         tablet: {
           smooth: true
