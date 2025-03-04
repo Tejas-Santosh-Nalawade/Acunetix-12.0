@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Squares from '../components/Squares';
-import TimescapeImg from '../assets/timeScape.webp';
-import logo from "../assets/logo.png";
+import TreasureTroveImg from '../assets/treasure-trove.webp'
 
-const Timescape = () => {
+
+const TreasureTrove= () => {
   const navigate = useNavigate();
 
   const handleLinkClick = () => {
@@ -26,14 +24,13 @@ const Timescape = () => {
   };
 
   const handleRegisterClick = () => {
-    window.open(" https://forms.gle/wrMqjquYG1YYLcFX7", "_blank");
+    window.open("https://forms.gle/SXWBVpjo8ThZXDkMA", "_blank");
   };
 
   // // Scroll to top on component mount (especially for mobile)
   // useEffect(() => {
   //   window.scrollTo({ top: 0, behavior: "instant" });
   // }, []);
-
   return (
     <>
       {/* Fixed Navbar */}
@@ -81,12 +78,12 @@ const Timescape = () => {
             <div className="flex flex-col md:flex-row items-center gap-8 h-full">
               {/* Left Column */}
             <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center h-full space-y-10">
-              <h1 className="text-5xl md:text-6xl font-bold text-white">Time Scape</h1>
+              <h1 className="text-5xl md:text-6xl font-bold text-white">Dpu Premier League</h1>
 
               {/* Mobile View */}
                       <div className="md:hidden flex flex-col items-center space-y-10" >
                       <img
-                        src={TimescapeImg}
+                        src={dplImg}
                         alt="Event Poster"
                         className="rounded-xl shadow-2xl w-full max-w-sm max-h-[350px] object-contain transform hover:scale-105 transition-all duration-300"
                       />
@@ -124,7 +121,7 @@ const Timescape = () => {
             {/* Right Column */}
             <div className="hidden md:flex md:w-1/2 justify-center">
               <img
-                src={TimescapeImg}
+                src={TreasureTroveImg}
                 alt="Event Poster"
                 className="rounded-xl shadow-2xl w-full md:w-auto max-w-xl max-h-[500px] object-contain transform hover:scale-105 transition-all duration-300"
               />
@@ -140,5 +137,4 @@ const Timescape = () => {
   );
 };
 
-export default Timescape;
-
+export default TreasureTrove;

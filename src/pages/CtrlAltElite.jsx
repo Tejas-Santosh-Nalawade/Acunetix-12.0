@@ -28,7 +28,7 @@ const CtrlAltElite = () => {
   };
 
   const handleRegisterClick = () => {
-    window.open("https://forms.gle/VP6Ti6g6JSLWnqnx9", "_blank");
+    window.open("https://forms.gle/7zQjkqEEcmmRfzF59", "_blank");
   };
 
   // // Scroll to top on component mount (especially for mobile)

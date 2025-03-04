@@ -25,6 +25,8 @@ import CtrlAltElite from "./pages/CtrlAltElite";
 import CinemaEyesLens from "./pages/CinemaEyesLens";
 import Dpl from "./pages/Dpl";
 import GameStorm from "./pages/GameStorm";
+import BuildAThon from "./pages/Build-A-Thon";
+import BugBounty from "./pages/BugBounty";
 
 function MainContent() {
   const scrollRef = useRef(null);
@@ -249,6 +251,8 @@ function App() {
           <Route path="/event/cinemaEyesLens2" element={<EventWrapper Component={CinemaEyesLens} />} />
           <Route path="/event/codeOfLies2" element={<EventWrapper Component={CodeOfLies} />} />
           <Route path="/event/:id" element={<EventWrapper Component={EventCard} />} />
+          <Route path="/event/build-a-thon" element={<EventWrapper Component={BuildAThon} /> } />
+          <Route path="/event/BugBounty" element={<EventWrapper Component={BugBounty} /> } />
         </Routes>
       )}
     </>

@@ -27,7 +27,7 @@ const Dpl = () => {
   };
 
   const handleRegisterClick = () => {
-    window.open("https://forms.gle/VP6Ti6g6JSLWnqnx9", "_blank");
+    window.open("https://forms.gle/Eg839vLu25s2aj9G6", "_blank");
   };
 
   // // Scroll to top on component mount (especially for mobile)

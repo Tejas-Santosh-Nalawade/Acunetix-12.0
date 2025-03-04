@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Squares from '../components/Squares';
-import TimescapeImg from '../assets/timeScape.webp';
+import LetterGlitch from "../components/LetterGlitch";
+import BugBountyImg from '../assets/Bugbounty.webp'
 import logo from "../assets/logo.png";
 
-const Timescape = () => {
+const BugBounty = () => {
   const navigate = useNavigate();
 
   const handleLinkClick = () => {
@@ -26,7 +26,7 @@ const Timescape = () => {
   };
 
   const handleRegisterClick = () => {
-    window.open(" https://forms.gle/wrMqjquYG1YYLcFX7", "_blank");
+    window.open("https://forms.gle/AdGB9GsDJiHp2wgr5", "_blank");
   };
 
   // // Scroll to top on component mount (especially for mobile)
@@ -67,7 +67,7 @@ const Timescape = () => {
 
       <div className=" min-h-screen pt-12 pb-12">
         <div className="absolute inset-0">
-          <Squares
+          <LetterGlitch
             glitchSpeed={50}
             centerVignette={true}
             outerVignette={false}
@@ -81,12 +81,12 @@ const Timescape = () => {
             <div className="flex flex-col md:flex-row items-center gap-8 h-full">
               {/* Left Column */}
             <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center h-full space-y-10">
-              <h1 className="text-5xl md:text-6xl font-bold text-white">Time Scape</h1>
+              <h1 className="text-5xl md:text-6xl font-bold text-white">Brainiac</h1>
 
               {/* Mobile View */}
                       <div className="md:hidden flex flex-col items-center space-y-10" >
                       <img
-                        src={TimescapeImg}
+                        src={BugBountyImg}
                         alt="Event Poster"
                         className="rounded-xl shadow-2xl w-full max-w-sm max-h-[350px] object-contain transform hover:scale-105 transition-all duration-300"
                       />
@@ -124,7 +124,7 @@ const Timescape = () => {
             {/* Right Column */}
             <div className="hidden md:flex md:w-1/2 justify-center">
               <img
-                src={TimescapeImg}
+                src={BugBountyImg}
                 alt="Event Poster"
                 className="rounded-xl shadow-2xl w-full md:w-auto max-w-xl max-h-[500px] object-contain transform hover:scale-105 transition-all duration-300"
               />
@@ -140,5 +140,4 @@ const Timescape = () => {
   );
 };
 
-export default Timescape;
-
+export default BugBounty;
